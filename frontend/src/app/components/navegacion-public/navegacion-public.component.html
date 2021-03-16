@@ -7,18 +7,27 @@
       </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-
-                <h4><a class="nav-link" routerLink="home">Inicio</a></h4>
-                <h4><a class="nav-link" routerLink="nosotros">Nosotros</a></h4>
-                <h4><a class="nav-link" routerLink="nuestros-eventos">Eventos</a></h4>
+                <ul class="menu">
+                    <li>  <h4><a class="nav-link" routerLink="home">INICIO</a></h4> </li>
+                    <li><h4><a class="nav-link" routerLink="nosotros">NOSOTROS</a></h4></li>
+                    <li> <h4><a class="nav-link" routerLink="nuestros-eventos">EVENTOS</a></h4></li>
+                    <li> <h4><a class="nav-link" routerLink="nuestros-jordanes">CANINO</a></h4></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <h4>ADOPTAR</h4>
+                        </a>
+                        <div class="dropdown-menu">
+                          <h4><a class="dropdown-item" routerLink="requisitos-adopcion">REQUISITOS</a></h4>
+                          <h4><a class="dropdown-item" routerLink="/formulario-public" >POSTULARME</a></h4>
+                        </div>
+                      </li>
+                      
+                    <li><h4><a class="nav-link" routerLink="dona">DONA</a></h4></li>
+                    <li> <h4><a class="nav-link" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer">CONTACTO</a></h4></li>
                
-                <h4><a class="nav-link" routerLink="/formulario-public" >Postularme</a></h4>
-             
-                <h4><a class="nav-link" routerLink="nuestros-jordanes">Canino</a></h4>
-
-                <h4><a class="nav-link" routerLink="requisitos-adopcion">Requisitos</a></h4>
-                <h4><a class="nav-link" routerLink="dona">Doná</a></h4>
-                <h4><a class="nav-link" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer">Contacto</a></h4>
+              
+            
+            </ul>
 
 
 

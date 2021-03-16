@@ -23,6 +23,8 @@ import { IngresoComponent } from './components/ingreso/ingreso.component';
 import { RequisitosPublicComponent } from './components/requisitos-public/requisitos-public.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { FormularioAdopcionPublicComponent } from './components/formulario-adopcion-public/formulario-adopcion-public.component';
+import { NavegacionPublicComponent } from './components/navegacion-public/navegacion-public.component';
+import { AdminNavegacionComponent } from './components/admin-navegacion/admin-navegacion.component';
 
 
 const routes: Routes = [
@@ -117,7 +119,7 @@ const routes: Routes = [
     path:'requisitos-adopcion', 
     component:RequisitosPublicComponent
   }
-
+ 
 ];
 
 @NgModule({
