@@ -1,1 +1,10 @@
 .alert{ background-color: hsl(22, 83%, 72%); }
+
+img{
+    width: 65%;
+    height: 30%;
+    /*Centrar imagen*/
+    display: block;
+    margin: auto;
+
+}
