@@ -11,6 +11,7 @@ import enrutadorEvento from "./routes/evento.routes";
 import enrutadorProvincia from "./routes/provincia.routes";
 import enrutadorRequisito from "./routes/requisito.routes";
 import enrutadorCategoria from "./routes/cat_donacion.routes";
+import enrutadorCategoriaT from "./routes/cat_tienda.routes";
 import enrutadorDonaciones from "./routes/donaciones.routes";
 import enrutadorAut from "./routes/autenticacion.routes";
 
@@ -47,6 +48,7 @@ export class server {
         this.app.use(enrutadorProvincia);
         this.app.use(enrutadorRequisito);
         this.app.use(enrutadorCategoria);
+        this.app.use(enrutadorCategoriaT);
         this.app.use(enrutadorDonaciones);
         this.app.use(enrutadorAut);
         //configura el server para que pueda leer la carpeta y leer las img

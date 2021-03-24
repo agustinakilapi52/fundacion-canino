@@ -1,28 +1,35 @@
 <div class="p-3">
    
-        <H1>CONOCE A NUESTROS
-            <STRONG>JORDANES</STRONG>
-        </H1>
-    
-    <p class="text-muted">Buscan un hogar donde sean cuidados con <strong>responsabilidad, amor y compromiso.</strong></p>
+    <H1>ADOPTA UN
+        <STRONG>JORDAN</STRONG>
+    </H1>
+    <hr>
 
-    <div class="row">
+<p class="text-muted">Buscan un hogar donde sean cuidados con <strong>responsabilidad, amor y compromiso.</strong></p>
+<br>
 
-        <div class="col-lg-2" *ngFor="let canino of lista_caninos | paginate:{itemsPerPage:5,currentPage:p}">
-            <div class="card border-danger mb-3 "> <img [src]="canino.imagen_portada " class="card-img-top" style="height: 250px;" alt="..." style="height: 250px;">
-                <div class="card-body ">
-                    <h5 class="card-title ">{{canino.nombre}}</h5>
-                    <button (click)="detalleCaninoPublic(canino.id_canino) " class="btn btn-primary ">Conoce más de {{canino.nombre}}</button>
-                </div>
+<div class="row">
+
+    <div class="col" *ngFor="let canino of lista_caninos | paginate:{itemsPerPage:15,currentPage:p}">
+        <div class="card border-0 "> <img [src]="canino.imagen_portada " class="card-img-top" style="height: 250px;" alt="..." style="height: 250px;">
+            <div class="card-body ">
+                <button (click)="detalleCaninoPublic(canino.id_canino) " class="btn">
+                    <h6> {{canino.nombre}}</h6>
+                   
+                   
+                </button>
             </div>
         </div>
     </div>
+</div>
 
 
 
-    <div class="row">
-        <div class="col-sm-4">
-            <pagination-controls (pageChange)="p = $event"></pagination-controls>
-        </div>
+<div class="row">
+    <div class="col-sm-4">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
 </div>
+</div>
+
+<app-pie> </app-pie>

@@ -16,6 +16,7 @@ const evento_routes_1 = __importDefault(require("./routes/evento.routes"));
 const provincia_routes_1 = __importDefault(require("./routes/provincia.routes"));
 const requisito_routes_1 = __importDefault(require("./routes/requisito.routes"));
 const cat_donacion_routes_1 = __importDefault(require("./routes/cat_donacion.routes"));
+const cat_tienda_routes_1 = __importDefault(require("./routes/cat_tienda.routes"));
 const donaciones_routes_1 = __importDefault(require("./routes/donaciones.routes"));
 const autenticacion_routes_1 = __importDefault(require("./routes/autenticacion.routes"));
 //Creo la clase server
@@ -40,6 +41,7 @@ class server {
         this.app.use(provincia_routes_1.default);
         this.app.use(requisito_routes_1.default);
         this.app.use(cat_donacion_routes_1.default);
+        this.app.use(cat_tienda_routes_1.default);
         this.app.use(donaciones_routes_1.default);
         this.app.use(autenticacion_routes_1.default);
         //configura el server para que pueda leer la carpeta y leer las img

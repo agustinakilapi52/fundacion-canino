@@ -25,6 +25,7 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { FormularioAdopcionPublicComponent } from './components/formulario-adopcion-public/formulario-adopcion-public.component';
 import { NavegacionPublicComponent } from './components/navegacion-public/navegacion-public.component';
 import { AdminNavegacionComponent } from './components/admin-navegacion/admin-navegacion.component';
+import { TiendaHomeComponent } from './components/tienda-home/tienda-home.component';
 
 
 const routes: Routes = [
@@ -118,6 +119,12 @@ const routes: Routes = [
   {
     path:'requisitos-adopcion', 
     component:RequisitosPublicComponent
+  },
+  {
+
+  path:'tienda-home',
+  component:TiendaHomeComponent
+ 
   }
  
 ];

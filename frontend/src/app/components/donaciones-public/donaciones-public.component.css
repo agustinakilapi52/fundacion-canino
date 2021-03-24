@@ -8,3 +8,10 @@ img{
     margin: auto;
 
 }
+
+.btn{
+    display: block;
+    margin: auto;
+    border-radius: 0px;
+
+}

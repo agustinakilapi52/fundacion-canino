@@ -7,6 +7,12 @@ body {
     margin: auto;
 }
 
+.margen{
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
+   
+}
 header {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://i.postimg.cc/YjcJg24M/aa.jpg);
     height: 100vh;
@@ -14,6 +20,7 @@ header {
     background-size: cover;
     background-position: center center;
     position: relative;
+    
 }
 
 .nav-area {
@@ -281,4 +288,21 @@ a {
 
 .card{
     border: 0cm;
+    height: 100px;
+    width: 200px;
+    border-radius: 0;
 }
+
+
+h5{
+    color:#F89738;
+
+}
+
+.col-lg-4{
+    margin-right: 40px;
+    margin-left: 40px;
+
+}
+
+

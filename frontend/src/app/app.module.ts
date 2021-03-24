@@ -42,6 +42,7 @@ import { AuthGuard } from "./auth.guard";
 import { TokenInterceptorService } from "./service/token-interceptor.service";
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PieComponent } from './components/pie/pie.component';
+import { TiendaHomeComponent } from './components/tienda-home/tienda-home.component';
 
 
 
@@ -75,7 +76,8 @@ import { PieComponent } from './components/pie/pie.component';
     IngresoComponent,
     RegistroComponent,
     NosotrosComponent,
-    PieComponent
+    PieComponent,
+    TiendaHomeComponent
 
   ],
   imports: [
