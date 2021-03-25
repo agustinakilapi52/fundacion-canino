@@ -43,6 +43,7 @@ import { TokenInterceptorService } from "./service/token-interceptor.service";
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PieComponent } from './components/pie/pie.component';
 import { TiendaHomeComponent } from './components/tienda-home/tienda-home.component';
+import { AdminCategoriaTiendaComponent } from './components/admin-categoria-tienda/admin-categoria-tienda.component';
 
 
 
@@ -77,7 +78,8 @@ import { TiendaHomeComponent } from './components/tienda-home/tienda-home.compon
     RegistroComponent,
     NosotrosComponent,
     PieComponent,
-    TiendaHomeComponent
+    TiendaHomeComponent,
+    AdminCategoriaTiendaComponent
 
   ],
   imports: [

@@ -1,0 +1,81 @@
+<div class="p-3">
+    <div class="row">
+        <div class="col-sm-8">
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <input placeholder="Ingrese criterio de búsqueda" [(ngModel)]="buscarTienda" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let categorias of listCategoriaTienda | filter:buscarTienda | paginate:{itemsPerPage:5,currentPage:p}">
+                        <td>{{categorias.id_categoria_tienda}}</td>
+                        <td>{{categorias.nombre}}</td>
+                        <td>{{categorias.descripcion}}</td>
+                        <td>{{categorias.imagen}}</td>
+                        <td>
+                            <div class="btn-group-sm">
+                                <button class="btn btn-danger" (click)="eliminarCategoriaT(categorias.id_categoria_tienda)">Eliminar</button>
+                                <button class="btn btn-primary" (click)="editarCategoriaT(categorias)">Editar</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-sm-4">
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+
+            <div class="card">
+                <div class="card-header">Formulario Categoria Tienda</div>
+                <div class="card-body">
+                    <form [formGroup]="formCategoriaTienda" (ngSubmit)="guardarCategoriaT()" novalidate>
+
+                        <input formControlName="id_categoria_tienda" type="text" type="hidden">
+
+                        <div class="form-group">
+                            <input [ngClass]="{'is-invalid':(formCategoriaTienda.get('nombre')?.touched || formCategoriaTienda.get('nombre')?.dirty) && formCategoriaTienda.get('nombre')?.invalid}" formControlName="nombre" placeholder="Ingrese el Nombre" type="text" class="form-control">
+                            <div class="invalid-feedback">
+                                <span *ngIf="formCategoriaTienda.get('nombre').hasError('required')">Campo Requerido </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input [ngClass]="{'is-invalid':(formCategoriaTienda.get('descripcion')?.touched || formCategoriaTienda.get('descripcion')?.dirty) && formCategoriaTienda.get('descripcion')?.invalid}" formControlName="descripcion" placeholder="Ingrese Descripcion" type="text" class="form-control">
+                            <div class="invalid-feedback">
+                                <span *ngIf="formCategoriaTienda.get('descripcion').hasError('required')">Campo Requerido </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input [ngClass]="{'is-invalid':(formCategoriaTienda.get('imagen')?.touched || formCategoriaTienda.get('imagen')?.dirty) && formCategoriaTienda.get('imagen')?.invalid}" formControlName="imagen" placeholder="Ingrese la imagen" type="text" class="form-control">
+                            <div class="invalid-feedback">
+                                <span *ngIf="formCategoriaTienda.get('imagen').hasError('required')">Campo Requerido </span>
+                            </div>
+                        </div>
+
+                        <button [disabled]="formCategoriaTienda.invalid" class="btn btn-success">Guardar</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

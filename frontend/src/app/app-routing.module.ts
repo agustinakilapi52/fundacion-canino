@@ -26,6 +26,7 @@ import { FormularioAdopcionPublicComponent } from './components/formulario-adopc
 import { NavegacionPublicComponent } from './components/navegacion-public/navegacion-public.component';
 import { AdminNavegacionComponent } from './components/admin-navegacion/admin-navegacion.component';
 import { TiendaHomeComponent } from './components/tienda-home/tienda-home.component';
+import { AdminCategoriaTiendaComponent } from './components/admin-categoria-tienda/admin-categoria-tienda.component';
 
 
 const routes: Routes = [
@@ -125,7 +126,14 @@ const routes: Routes = [
   path:'tienda-home',
   component:TiendaHomeComponent
  
+  },
+  {
+
+  path:'categoria_tienda',
+  component:AdminCategoriaTiendaComponent
+ 
   }
+
  
 ];
 
