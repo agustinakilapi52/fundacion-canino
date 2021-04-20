@@ -14,8 +14,18 @@ body {
     display:block;
     margin:auto;
 }
+
+.card-img:hover {
+    color: #F89738;
+}
+
 a {
     text-decoration: none;
+}
+
+.text-more {
+   color: #F89738;
+   font-size: 1rem;
 }
 
 .social a {
@@ -170,3 +180,121 @@ a {
         text-align: center;
     }
 }
+
+.card-title{
+    color: #293132;
+    font-feature-settings: "kern";
+    -webkit-font-kerning: normal;
+    font-kerning: normal;
+    font-weight: 700;
+    letter-spacing: .0625rem;
+    line-height: 1.875rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+
+}
+
+h5{
+    color: black;
+    display: block;
+    font-size: 2.5vh;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.card-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+
+}
+      
+
+img{
+    border: 5px solid #ffc08c;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;   
+    transform:scale(1);
+    -webkit-transform:scale(1); 
+    object-fit: cover;
+}       
+
+img:hover{
+    background:#ff7525;
+    transform:scale(1);
+    -webkit-transform:scale(1); 
+    opacity: 0.2;
+} 
+
+ 
+.Heading_magnitude-2__3nlAC {
+    font-size: 1.575rem;
+  }
+  
+  
+  
+  .Heading_title__D47fZ {
+    font-weight: 700;
+    
+  }
+  
+  
+  
+  .Heading_title__D47fZ:not(.Heading_ornament-on-mobile__16QpF):after {
+    display: block;
+  }
+  
+  .Heading_title__D47fZ:not(.Heading_ornament-on-mobile__16QpF):after {
+    display: block;
+  }
+  
+  .Heading_title__D47fZ:after {
+    background: linear-gradient(
+  131.14deg
+  ,#F89738 4.53%,#F89738 70.61%,#F89738 102.64%)!important;
+    content: "";
+    margin-top: 15px;
+    height: .225rem;
+    width: 3.75rem;
+  }
+
+  /*WHATSAPP*/
+    
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}
+
+
+
+
+
+

@@ -36,7 +36,7 @@ export class IngresoComponent implements OnInit {
             alert("contraseña incorrecta")
           }else{
             localStorage.setItem('token',String(respuesta));
-            this.route.navigate(['/canino']);
+            this.route.navigate(['/home']);
           }
         }
       }

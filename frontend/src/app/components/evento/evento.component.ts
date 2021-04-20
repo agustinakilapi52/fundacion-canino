@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IEvento } from 'src/app/models/evento';
 import { EventoService } from "../../service/evento.service";
+
 import { Router } from "@angular/router";
 
 @Component({
@@ -38,6 +39,14 @@ export class EventoComponent implements OnInit {
     
     //Para redirigirme a una ruta voy a tener que importarme un par de modulos. Para esto debe existir la ruta en el app-routing
     this.router.navigate(['/contacto']);
+    
+  }
+
+  detalleEvento(id_evento:number) 
+  {
+    
+    //Para redirigirme a una ruta voy a tener que importarme un par de modulos. Para esto debe existir la ruta en el app-routing
+    this.router.navigate(['/evento-detalle',id_evento]);
     
   }
 

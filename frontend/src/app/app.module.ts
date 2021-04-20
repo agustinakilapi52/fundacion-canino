@@ -44,6 +44,10 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PieComponent } from './components/pie/pie.component';
 import { TiendaHomeComponent } from './components/tienda-home/tienda-home.component';
 import { AdminCategoriaTiendaComponent } from './components/admin-categoria-tienda/admin-categoria-tienda.component';
+import { AdminProductosTiendaComponent } from './components/admin-productos-tienda/admin-productos-tienda.component';
+import { AdminDetalleProductosComponent } from './components/admin-detalle-productos/admin-detalle-productos.component';
+import { DetalleProductoPublicComponent } from './components/detalle-producto-public/detalle-producto-public.component';
+import { EventoDetalleComponent } from './components/evento-detalle/evento-detalle.component';
 
 
 
@@ -79,7 +83,11 @@ import { AdminCategoriaTiendaComponent } from './components/admin-categoria-tien
     NosotrosComponent,
     PieComponent,
     TiendaHomeComponent,
-    AdminCategoriaTiendaComponent
+    AdminCategoriaTiendaComponent,
+    AdminProductosTiendaComponent,
+    AdminDetalleProductosComponent,
+    DetalleProductoPublicComponent,
+    EventoDetalleComponent
 
   ],
   imports: [

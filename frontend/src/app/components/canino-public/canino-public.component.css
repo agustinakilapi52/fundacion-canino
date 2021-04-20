@@ -1,4 +1,130 @@
-h6{
-    color:#F89738;
-    text-align: center;
+element.style {
+  padding: 0rem 1.875rem;
 }
+.TitleText_title-text__16lAf {
+  max-width: 40rem;  
+}
+
+.TitleText_title__3squ5 {
+  width: 70%;
+ 
+}
+.Heading_magnitude-2__3nlAC {
+  font-size: 1.575rem;
+}
+
+
+
+.Heading_title__D47fZ {
+  font-weight: 700;
+  
+}
+
+.col-xs-6 {
+  width: 50%;
+}
+
+
+
+.Heading_title__D47fZ:not(.Heading_ornament-on-mobile__16QpF):after {
+  display: block;
+}
+
+.Heading_title__D47fZ:not(.Heading_ornament-on-mobile__16QpF):after {
+  display: block;
+}
+
+.Heading_title__D47fZ:after {
+  background: linear-gradient(
+131.14deg
+,#F89738 4.53%,#F89738 70.61%,#F89738 102.64%)!important;
+  content: "";
+  margin-top: 15px;
+  height: .225rem;
+  width: 3.75rem;
+}
+
+h6{
+    color:grey;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: .0625rem;
+    line-height: 1.875rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+   
+  }
+
+img{
+  object-fit: cover;
+}
+ 
+
+.card-body{
+    text-align: center;
+    text-transform: uppercase;
+}
+div [class^="col-"]{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .card{
+    width: 15rem;
+    transition:0.5s;
+    cursor:pointer;
+    margin-right: 10px;
+  }
+
+  @media(max-width:411px){
+    .card{
+      width: 5rem;
+    }
+  }
+
+  @media(max-width:479px){
+    .card{
+      width: 10rem;
+    }
+
+    .Heading_magnitude-2__3nlAC {
+      font-size: 1.275rem;
+    }
+  }
+
+  @media(max-width:767px){
+    .card{
+      width: 12rem;
+    }
+  }
+
+  .card:hover{
+    transform: scale(1.10);
+   
+  }
+  
+  
+  .card::before, .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+   
+    content: '';
+    pointer-events: none;
+  }
+  .card::before {
+    transform-origin: left top;
+  }
+  .card::after {
+    transform-origin: right bottom;
+  }
+  .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+    transform: scale3d(1, 1, 1);
+  }
+ 
+
+  

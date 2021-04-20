@@ -58,13 +58,22 @@ export class EventoService {
     { 
       return this.http.get<IEvento[]>('http://localhost:4200/evento');
     }
+
+    getOneEvento(id_evento:number)
+    {
+      return this.http.get<IEvento>('http://localhost:4200/evento/'+id_evento);
+    }
     
     getImagenesEvento(id_evento:number)
     {
        return this.http.get<IEventoDetalle[]>('http://localhost:4200/listar-imagenes-evento/'+id_evento); // A través del metodo get obtenemos las imagenes de un evento especifico gracias a su id
       
     }
-
+    getImagenesOneEvento(id_evento:number)
+    {
+       return this.http.get<IEventoDetalle>('http://localhost:4200/listar-imagenes-un-evento/'+id_evento); // A través del metodo get obtenemos las imagenes de un evento especifico gracias a su id
+      
+    }
     addImagenesEvento(id_evento:number,files:FileList) //Se comunica a traves de http y del metodo put a la ruta deseada
     {
       const fd = new FormData();

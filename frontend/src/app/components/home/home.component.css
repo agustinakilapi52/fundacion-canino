@@ -1,4 +1,74 @@
 body {
+    margin: 0;
+  }
+  
+  .encabezado{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://scontent.fbrc1-1.fna.fbcdn.net/v/t1.6435-9/48393135_969436383265708_558148124149809152_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=0debeb&_nc_ohc=iidKctyTKUIAX_veL06&_nc_ht=scontent.fbrc1-1.fna&oh=74e2e541dae02b5079a018128f995bf2&oe=609CC502);
+    height: 100vh;
+  
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+
+  .encabezado h1 {
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    padding: 300px 20px;
+    font-family: Roboto;
+    font-size: 4vw;
+  }
+
+  .encabezado h1 span{
+      color: #F89738;
+  }
+
+  .encabezado a {
+    border: 1px solid #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #fff;
+   
+}
+
+.encabezado a:hover {
+    background: #fff;
+    color: tomato;
+   
+}
+
+  @media(max-width:479px){
+    .encabezado{
+        height:110vh;
+        width: 63vh;
+        line-height: 330px;
+    }
+   
+  }
+
+  @media(max-width:767px){
+    .encabezado{
+        height:360px;
+        line-height: 360px;
+    }
+  }
+
+  @media(max-width:991px){
+    .encabezado{
+        height:580px;
+        line-height: 640px;
+    }
+  }
+ 
+
+
+/* encabezado viejo*/
+body {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -14,9 +84,8 @@ body {
    
 }
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://i.postimg.cc/YjcJg24M/aa.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://scontent.fbrc1-1.fna.fbcdn.net/v/t1.6435-9/48393135_969436383265708_558148124149809152_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=0debeb&_nc_ohc=iidKctyTKUIAX_veL06&_nc_ht=scontent.fbrc1-1.fna&oh=74e2e541dae02b5079a018128f995bf2&oe=609CC502);
     height: 100vh;
-    -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -67,10 +136,11 @@ header {
 }
 
 .welcome-text h1 {
+
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 4vw;
 }
 
 .welcome-text h1 span {
@@ -90,11 +160,11 @@ header {
 
 .welcome-text a:hover {
     background: #fff;
-    color: #333;
+    color: tomato;
 }
 
 
-/*resposive*/
+/*resposive
 
 @media (max-width:600px) {
     .wrapper {
@@ -125,7 +195,7 @@ header {
     .welcome-text h1 {
         font-size: 30px;
     }
-}
+}*/
 
 a {
     text-decoration: none;
@@ -286,23 +356,116 @@ a {
     }
 }
 
-.card{
-    border: 0cm;
-    height: 100px;
-    width: 200px;
-    border-radius: 0;
+
+
+
+.btn{
+   margin-top: 3vh;
+    background-color: #FFFFFF;
+  
 }
 
 
-h5{
-    color:#F89738;
+
+
+p{
+    color:teal;
+    font-weight: 700;
+}
+
+h1 { font-size: 25px; }
+  
+  .Heading_magnitude-2__3nlAC {
+
+    line-height: 1em;
+    padding: 1em;
+    margin: 1em;
+    display: block;
+  }
+  
+  
+  
+  .Heading_title__D47fZ {
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    
+  }
+  
+  
+  
+  .Heading_title__D47fZ:not(.Heading_ornament-on-mobile__16QpF):after {
+    display: block;
+  }
+  
+  .Heading_title__D47fZ:not(.Heading_ornament-on-mobile__16QpF):after {
+    display: block;
+  }
+  
+  .Heading_title__D47fZ:after {
+    background: linear-gradient(
+  131.14deg
+  ,#F89738 4.53%,#F89738 70.61%,#F89738 102.64%)!important;
+    content: "";
+    margin-top: 15px;
+    height: .225rem;
+    width: 3.75rem;
+    display: block;
+
+    margin: .5rem auto 0;
+ 
+  }
+
+
+/*imagen circular*/
+
+.imagen_circular{
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+  
 
 }
 
-.col-lg-4{
-    margin-right: 40px;
-    margin-left: 40px;
+.imagen_circular img{
+    border: 5px solid #E5E8E8;
+}
+@media (max-width: 991px){
+    .img-fluid{
+      width: 15vh;
+    }
+
 
 }
+img.rounded-circle{
+    margin-left: 20px;
+    border-radius: 50%;
+ 
+}
 
+.adopta{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*banner*/
+
+
+img.banner {
+    margin-bottom: 30px;
+    max-width: 85%;
+}
+.banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor:pointer;
+}
+
+
+img {
+    height: auto;
+  
+}
 

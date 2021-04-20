@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { IUsuario } from "../models/usuario";
 import { Router } from "@angular/router";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +18,7 @@ export class AutenticacionService {
 
   login(datosIngreso:IUsuario)
   {
-    return this.http.post('http://localhost:4200/ingresar',datosIngreso);
+    return this.http.post('http://localhost:4200/ingreso',datosIngreso);
   }
 
   verificarUsuarioLogueado()

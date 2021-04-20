@@ -29,12 +29,12 @@ export class RegistroComponent implements OnInit {
 
 
   registrar(){
-    
+    //localstorage del navegador se guarda el token 
     this.autServ.register(this.formRegistro.value).subscribe(
       respuesta =>{
-        localStorage.setItem('token', String(respuesta));
+        localStorage.setItem('token',String(respuesta));
         this.formRegistro.reset();
-        this.route.navigate(['/form-adopcion']);
+        this.route.navigate(['/home']);
 
       }
     );

@@ -138,6 +138,17 @@ export class EventoController {
         return res.json(unEvento[0]);
     }
 
+    async obtenerImagenesUnEvento(req:Request, res:Response) 
+    {
+            let id_evento = req.params.id_evento;
+
+            const base = await con();
+
+            const listar_imagenes_un_evento = await base.query('select * from imagenes_evento where id_evento = ?', [id_evento]);
+            
+            res.json(listar_imagenes_un_evento);
+    }
+
     public async listarImagenesEvento(req:Request,res:Response)
     {
         //listamos todas las imagenes pertenecientes a un evento. ESte metodo va a tener que recibir como parametro

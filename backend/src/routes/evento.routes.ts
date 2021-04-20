@@ -29,5 +29,5 @@ enrutadorEvento.route('/eliminar-imagen-evento/:id_ie/:public_id').delete(evento
 
 enrutadorEvento.route('/evento-portada/:id_ie/:id_evento').get(eventoController.establecerPortada);
 
-
+enrutadorEvento.route('/listar-imagenes-un-evento/:id_evento').get(eventoController.obtenerImagenesUnEvento);
 export default enrutadorEvento;

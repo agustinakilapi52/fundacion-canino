@@ -1,3 +1,7 @@
+//auth.guard
+//opcion can active
+//sirve para consultar si existe o no el token, protege las rutas en angular
+
 import { Injectable } from '@angular/core';
 import { CanActivate} from '@angular/router';
 import { AutenticacionService } from "src/app/service/autenticacion.service";

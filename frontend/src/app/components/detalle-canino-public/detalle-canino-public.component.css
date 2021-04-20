@@ -1,6 +1,14 @@
 h5{
     font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 1vh;
 
+}
+h4{
+   text-align: center;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   margin-bottom: 1vh;
 }
 
 .card{
@@ -11,4 +19,23 @@ h5{
 .btn{
     border-radius: 0;
 
+}
+
+.card-header{
+    background-color: white;
+
+}
+.adopcion{
+  
+    background-color: #F89738;
+}
+
+.adopcion a{
+    color: black;
+}
+
+p{
+    padding: 3vh;
+    color: white;
+   
 }

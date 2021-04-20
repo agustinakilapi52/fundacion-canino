@@ -1,5 +1,6 @@
 import { Router } from "express";
 import multer from "../libs/multer";
+import { validarToken } from "../libs/verificarToken";
 
 import { CaninoController } from "../controllers/perros.controller";
 

@@ -118,6 +118,14 @@ class EventoController {
             return res.json(unEvento[0]);
         });
     }
+    obtenerImagenesUnEvento(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let id_evento = req.params.id_evento;
+            const base = yield database_1.con();
+            const listar_imagenes_un_evento = yield base.query('select * from imagenes_evento where id_evento = ?', [id_evento]);
+            res.json(listar_imagenes_un_evento);
+        });
+    }
     listarImagenesEvento(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             //listamos todas las imagenes pertenecientes a un evento. ESte metodo va a tener que recibir como parametro

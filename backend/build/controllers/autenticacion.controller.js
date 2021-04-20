@@ -19,33 +19,40 @@ const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 class AutenticacionController {
     registrar(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            // un salt genera un fragmento unico y no repetitivo
             const salt = yield bcryptjs_1.default.genSalt(10);
+            //bcrypt genera un cifrado utilizando un hash junto con la contraseña ingresada
             const password_cifrada = yield bcryptjs_1.default.hash(req.body.password, salt);
             const unUsuario = {
                 username: req.body.username,
                 password: password_cifrada,
                 email: req.body.email
             };
-            const db = yield database_1.con();
-            const resultado = yield db.query('insert into usuario set ?', [unUsuario]);
-            const token = jsonwebtoken_1.default.sign({ _id: resultado.insertId }, process.env.TOKEN_SECRET || '1f58hdgd');
+            const base = yield database_1.con();
+            //guardar los datos del usuario en la constante resultado
+            const resultado = yield base.query('insert into usuario set ?', [unUsuario]);
+            //guardar el token generado en la constante token 
+            const token = jsonwebtoken_1.default.sign({ _id: resultado.insertId }, process.env.TOKEN_SECRET || '12qwaszx');
             res.json(token);
         });
     }
     ingresar(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const db = yield database_1.con();
-            const usuario = yield db.query('select * from usuario where username = ?', [req.body.username]);
+            const base = yield database_1.con();
+            const usuario = yield base.query('select * from usuario where username = ?', [req.body.username]);
             if (!usuario[0]) {
-                res.json(0);
+                res.json('usuario o contraseña incorrecta');
             }
             else {
-                const correctpassword = yield bcryptjs_1.default.compare(req.body.password, usuario[0].password);
-                if (!correctpassword) {
-                    res.json(1);
+                //comparar la contraseña ingresada con las guardadas en la base
+                const correctPassword = yield bcryptjs_1.default.compare(req.body.password, usuario[0].password);
+                if (!correctPassword) {
+                    res.json('contraseña incorrecta');
                 }
                 else {
-                    const token = jsonwebtoken_1.default.sign({ _id: usuario[0].id_usuario }, process.env.TOKEN_SECRET || '1f58hdgd', { expiresIn: 60 * 60 * 24 });
+                    const token = jsonwebtoken_1.default.sign({ _id: usuario[0].id_usuario }, process.env.TOKEN_SECRET || '12qwaszx', {
+                        expiresIn: 60 * 60 * 24
+                    });
                     res.json(token);
                 }
             }

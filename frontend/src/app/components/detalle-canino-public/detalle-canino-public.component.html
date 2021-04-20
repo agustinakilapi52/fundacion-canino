@@ -3,43 +3,29 @@
     <br>
     <div class="row">
         <div class="col-lg-6">
-            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style="max-width: 25rem;">
                 <div class="carousel-inner">
                     <div class="carousel-item" *ngFor="let fila of imagenesUnCanino;let index = index;let isFirst = first" [ngClass]="{active:isFirst}">
                         <img [src]="fila.imagen_url" class="d-block w-100" [alt]="">
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+        
             </div>
 
         </div>
+<br>
 
 
 
-        <div class="col-lg-6">
-            <div class="card border-primary mb-3" style="max-width: 30rem;">
+      
+            <div class="card border-0 mb-3" style="max-width: 30rem;">
                 <div class="card-header">
                     <h4><strong>{{unCanino.nombre}}</strong></h4> </div>
                 <div class="card-body">
                   
-                            <h5><strong>EDAD:</strong>{{unCanino.edad}}<br></h5>
+                            <h5><strong>EDAD:</strong> {{unCanino.edad}}<br></h5>
 
-                            <div *ngIf="unCanino.sexo == 0">
-                                <span class="badge badge-primary">Sexo Hembra</span>
-                            </div>
-                            <div *ngIf="unCanino.sexo == 1">
-                                <span class="badge badge-primary"> Macho</span>
-                            </div>
-                            <div *ngIf="unCanino.sexo == 2">
-                                <span class="badge badge-danger">Sexo No Registrado</span>
-                            </div>
+                            
 
                             <div *ngIf="unCanino.tamanio == 0">
                                 <span class="badge badge-primary">Tamaño Pequeño</span>
@@ -53,18 +39,24 @@
                             <div *ngIf="unCanino.tamanio == 3">
                                 <span class="badge badge-danger">Tamaño No Registrado</span>
                             </div>
+                            <br>
 
                            <h5> <strong>DESCRIPCIÓN:</strong></h5>
                             {{unCanino.descripcion}}<br>
                             <br>
-                            <button type="button" class="btn btn-outline-danger" routerLink="/formulario-public" >ADOPTAME</button>
+                            <div class="adopcion"> 
+                                <p>Si desea postularse para brindarle amor y un hogar a {{unCanino.nombre}} comuniquese con nosotros
+                                    via mail o whatsapp. Por favor antes verifique que cumple con los  <a  routerLink="/requisitos-adopcion">requisitos</a> basicos para realizar la adopción.</p>
+                            </div>
+                           
 
                   
                 </div>
               </div>
 
-        </div>
+        
     </div>
 </div>
+<br>
 <br>
 <app-pie></app-pie>

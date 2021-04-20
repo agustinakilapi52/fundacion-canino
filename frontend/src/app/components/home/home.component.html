@@ -1,5 +1,6 @@
-<header>
-    <div class="wrapper" style="width: 99vw;">
+<!-- 
+    <header>
+    <div class="wrapper" style="height: 99vw;">
 
     </div>
     <div class="welcome-text">
@@ -9,6 +10,15 @@
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer">Contacto</a>
     </div>
 </header>
+-->
+<div class="encabezado">
+    
+        <h1> FUNDACIÓN <span>SOS</span></h1>
+        <a routerLink="/nosotros"  style="cursor: pointer">Contacto</a>
+    
+    
+</div>
+
 
 
 
@@ -54,50 +64,84 @@
 </div>
 
 <!---------------------------------------------------------------------------------------------------!-->
-<div class="margen">
-    <div id="canino">
 
-        <H3>
-            BIENVENIDOS
-            <STRONG>JORDANES</STRONG>
-        </H3>
-        <hr><br>
-   
-            <p class="text-muted">Buscan un hogar donde sean cuidados con <strong>responsabilidad, amor y compromiso.</strong></p>
-
+<br><br>
+<div class="container">
+    
             
-        
-            <div class="row">
-                <div class="col-lg-2" *ngFor="let canino of lista_caninos | paginate:{itemsPerPage:3,currentPage:p}">
-                    <div class="card border-danger">
-                        <img [src]="canino.imagen_portada" class="card-img-top" style="height: 200px;" alt="...">
-                        <div class="card-body">
-                            <a routerLink="../nuestros-jordanes">
-                                <h5>{{canino.nombre}}</h5>
-                            </a>
+        <div class="Spacer TitleText_title-text__16lAf" >
+            <h1 class="Heading_title__D47fZ TitleText_title__3squ5 Heading_magnitude-2__3nlAC Heading_no-uppercase__1FYqt">
+           ADOPTAR ES SALVAR UNA VIDA 
+            </h1>
+        </div>
+      
+        <div class="imagen_circular">
+
+
+            <img class="img-fluid rounded-circle "  alt="100x100" src="assets/adop1.jpg" 
+              data-holder-rendered="true" width="200vh">
+
+            <img class="img-fluid rounded-circle " alt="100x100" src="assets/adop2.jpg" 
+              data-holder-rendered="true" width="200vh">
+
+            <img class="img-fluid rounded-circle" alt="100x100" src="assets/adop3.jpg" 
+              data-holder-rendered="true" width="200vh">
+    
+          </div>
+        <!-- <p class="text-muted">Buscan un hogar donde sean cuidados con <strong>responsabilidad, amor y compromiso.</strong></p>
+
+            <div class="row"> 
+                <div class="col-3"(click)="detalleCaninoPublic(canino.id_canino)" *ngFor="let canino of lista_caninos | paginate:{itemsPerPage:3,currentPage:p}">
+                    <div class="card border-0 "> <img [src]="canino.imagen_portada " class="card-img-top" style="height: 250px;" alt="..." style="height: 250px;">
+                        <div class="card-body ">
+                            <button (click)="detalleCaninoPublic(canino.id_canino) " class="btn">
+                                <h6> {{canino.nombre}}</h6>
+                               
+                               
+                            </button>
                         </div>
                     </div>
                 </div>
-                <br>
-            </div>
-        </div>
-        
-        <br>
-        <br>    
-    
-<br>
-<br>
+            </div>   -->
+       
+    <div class="adopta"> 
+        <button type="button" class="btn btn-success border-0" routerLink="/nuestros-jordanes">
+          <p>ADOPTA UN JORDAN</p>  
+        </button>
+    </div>
+   
+
+
+    <br>
+   
 
 <br>
+<div class="Spacer TitleText_title-text__16lAf" >
+    <h1 class="Heading_title__D47fZ TitleText_title__3squ5 Heading_magnitude-2__3nlAC Heading_no-uppercase__1FYqt">
+    COLABORAR CON LA FUNDACIÓN
+    </h1>
+</div>
 <br>
 <br>
-<button type="button" class="btn btn-success" routerLink="/nuestros-jordanes">JORDANES</button>
+<div class="row">
+    <div class="col-md-6">
+        <img class="banner" src="assets/tienda3.png" routerLink="/tienda-home">
+
+    </div>
+    <div class="col-md-6">
+
+        <img class="banner" src="assets/tienda.png" routerLink="/dona">
+        
+    </div>
+</div>
+
 </div>
 <br>
 <br>
 <br>
-   
-<app-pie></app-pie>
+<br>
+
+
   
       
 

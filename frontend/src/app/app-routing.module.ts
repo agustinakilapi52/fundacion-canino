@@ -27,7 +27,12 @@ import { NavegacionPublicComponent } from './components/navegacion-public/navega
 import { AdminNavegacionComponent } from './components/admin-navegacion/admin-navegacion.component';
 import { TiendaHomeComponent } from './components/tienda-home/tienda-home.component';
 import { AdminCategoriaTiendaComponent } from './components/admin-categoria-tienda/admin-categoria-tienda.component';
+import { AdminProductosTiendaComponent } from './components/admin-productos-tienda/admin-productos-tienda.component';
+import { AdminDetalleProductosComponent } from './components/admin-detalle-productos/admin-detalle-productos.component';
+import { DetalleProductoPublicComponent } from './components/detalle-producto-public/detalle-producto-public.component';
+import { EventoDetalleComponent } from './components/evento-detalle/evento-detalle.component';
 
+import { AuthGuard } from "./auth.guard";
 
 const routes: Routes = [
   {
@@ -36,7 +41,8 @@ const routes: Routes = [
   },
   {
     path:'canino', 
-    component:CaninoComponent
+    component:CaninoComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'form-adopcion/:numero', 
@@ -45,6 +51,19 @@ const routes: Routes = [
   {
     path:'admin-evento',
     component:AdmindEventoComponent
+  },
+  {
+    path:'admin-producto',
+    component:AdminProductosTiendaComponent
+  },
+  {
+    path:'admin-detalle-producto/:id_productos',
+    component:AdminDetalleProductosComponent
+  },
+
+  {
+    path:'evento-detalle/:id_evento',
+    component:EventoDetalleComponent
   },
   {
     path:'admin-detalle-evento/:id_evento',
@@ -96,6 +115,10 @@ const routes: Routes = [
   {
     path:'detalle-jordan/:id_canino', 
     component:DetalleCaninoPublicComponent
+  },
+  {
+    path:'detalle-producto/:id_productos', 
+    component:DetalleProductoPublicComponent
   },
   {
     path:'home', 

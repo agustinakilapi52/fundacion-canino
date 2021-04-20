@@ -1,0 +1,66 @@
+<div class="div container">
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-lg-6">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item" *ngFor="let fila of imagenesUnProducto;let index = index;let isFirst = first" [ngClass]="{active:isFirst}">
+                        <img [src]="fila.imagen_url" class="d-block w-100" [alt]="">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <br>
+            <h5>DESCRIPCION</h5>
+            {{unProducto.descripcion}}
+
+
+        </div>
+
+
+
+        <div class="col-lg-6">
+            <div class="card border-0 mb-3" style="max-width: 20rem;">
+                <div class="card-header border-0">
+                    <h4><strong>{{unProducto.nombre}}</strong></h4> </div>
+                <div class="card-body">
+                  
+                            <h5>${{unProducto.precio}}<br></h5>
+                            
+                            <h5>TALLES</h5>
+
+                            <div class="form-group">
+                                <select class="custom-select">
+                                  <option selected="">Seleccione el talle</option>
+                                  <option value="1">S</option>
+                                  <option value="2">M</option>
+                                  <option value="3">XL</option>
+                                </select>
+                              </div>
+
+            
+
+                
+                            <button type="button" class="btn btn-outline-danger" routerLink="/formulario-public" >AGREGAR AL CARRITO</button>
+
+                  
+                </div>
+              </div>
+
+        </div>
+    </div>
+
+    <h5>Relacionados</h5>
+</div>
+<br>
+
+<app-pie></app-pie>
+

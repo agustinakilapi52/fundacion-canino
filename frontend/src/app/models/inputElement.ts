@@ -8,3 +8,7 @@ export interface IHtmlInputCanine {
 export interface IHtmlInputDonaciones {
     target:HTMLInputElement & EventTarget //lee los elementos
 }
+
+export interface IHtmlInputProducto {
+    target:HTMLInputElement & EventTarget //lee los elementos
+}
