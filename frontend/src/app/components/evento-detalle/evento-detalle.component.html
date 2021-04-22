@@ -8,17 +8,10 @@
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item" *ngFor="let fila of imagenesUnEvento;let index = index;let isFirst = first" [ngClass]="{active:isFirst}">
-                    <img [src]="fila.imagen_url" class="d-block w-100" [alt]="">
+                    <img [src]="fila.imagen_url" class="d-block w-100" [alt]="" height="550vh">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+           
         </div>
     </figure>
    
@@ -26,7 +19,7 @@
     <strong>{{unEvento.fecha_hora}}</strong>
     <p>{{unEvento.ubicacion}}</p>
     <hr>
-    <p>{{unEvento.descripcion}}</p>
+    <p class="descripcion">{{unEvento.descripcion}}</p>
 
 
 
@@ -35,4 +28,4 @@
 <br>
 <br>
 <br>
-<app-pie></app-pie>
+

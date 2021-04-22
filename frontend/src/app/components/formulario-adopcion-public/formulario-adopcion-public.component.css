@@ -1,6 +1,4 @@
-.card{
-    border: 0cm;
-}
+
 h3{
     font-size: 1em;
 }
@@ -9,3 +7,34 @@ h3{
     margin-right: 40px;
 
 }
+ 
+.Heading_magnitude-2__3nlAC {
+    font-size: 1.575rem;
+  }
+  
+  
+  
+  .Heading_title__D47fZ {
+    font-weight: 700;
+    
+  }
+  
+  
+  
+  .Heading_title__D47fZ:not(.Heading_ornament-on-mobile__16QpF):after {
+    display: block;
+  }
+  
+  .Heading_title__D47fZ:not(.Heading_ornament-on-mobile__16QpF):after {
+    display: block;
+  }
+  
+  .Heading_title__D47fZ:after {
+    background: linear-gradient(
+  131.14deg
+  ,#F89738 4.53%,#F89738 70.61%,#F89738 102.64%)!important;
+    content: "";
+    margin-top: 15px;
+    height: .225rem;
+    width: 3.75rem;
+  }

@@ -20,6 +20,7 @@ const cat_tienda_routes_1 = __importDefault(require("./routes/cat_tienda.routes"
 const donaciones_routes_1 = __importDefault(require("./routes/donaciones.routes"));
 const autenticacion_routes_1 = __importDefault(require("./routes/autenticacion.routes"));
 const productos_tienda_routes_1 = __importDefault(require("./routes/productos_tienda.routes"));
+const contacto_routes_1 = __importDefault(require("./routes/contacto.routes"));
 //Creo la clase server
 class server {
     constructor() {
@@ -46,6 +47,7 @@ class server {
         this.app.use(donaciones_routes_1.default);
         this.app.use(autenticacion_routes_1.default);
         this.app.use(productos_tienda_routes_1.default);
+        this.app.use(contacto_routes_1.default);
         //configura el server para que pueda leer la carpeta y leer las img
         this.app.use('/uploads', express_1.default.static(path_1.default.resolve('uploads')));
     }

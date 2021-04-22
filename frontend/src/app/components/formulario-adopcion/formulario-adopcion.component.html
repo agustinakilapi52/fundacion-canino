@@ -1,4 +1,4 @@
-<div class="p-3">
+<!--<div class="p-3">
     <div class="row">
         <div class="col-sm-12 col-lg-8" [style]="display">
             <div class="row">
@@ -13,36 +13,26 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Direccion</th>
-                        <th>DNI</th>
-                        <th>Teléfono</th>
-                        <th>Correo</th>
-                        <th>Canino</th>
-                        <th>Provincia</th>
-                        <th>Localidad</th>
-                        <!--<th>Requisito</th>-->
+                        <th>Nombre y Apellido</th>
+                        <th>Email</th>
+                        <th>Asunto</th>
+                        <th>Mensaje</th>
+
                         <th>Operaciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let formularioA of listFormularioA | filter:buscarFormulario | paginate:{itemsPerPage:10,currentPage:p}">
-                        <td>{{formularioA.id_formulario}}</td>
-                        <td>{{formularioA.nombre}}</td>
-                        <td>{{formularioA.apellido}}</td>
-                        <td>{{formularioA.direccion}}</td>
-                        <td>{{formularioA.dni}}</td>
-                        <td>{{formularioA.telefono}}</td>
-                        <td>{{formularioA.correo}}</td>
-                        <td>{{formularioA.canino}}</td>
-                        <td>{{formularioA.provincia_id}}</td>
-                        <td>{{formularioA.id_localidad}}</td>
-                        <!--<td>{{formularioA.requisito}}</td>-->
+                    <tr *ngFor="let contacto of contacto | filter:buscarFormulario | paginate:{itemsPerPage:10,currentPage:p}">
+                        <td>{{contacto.id_contacto}}</td>
+                        <td>{{contacto.nombre}}</td>
+                        <td>{{contacto.email}}</td>
+                        <td>{{contacto.asunto}}</td>
+                        <td>{{contacto.mensaje}}</td>
+                        
                         <td>
                             <div class="btn-group btn-group-sm">
-                                <button (click)="eliminarFormularioA(formularioA.id_formulario)" class="btn btn-danger">Eliminar</button>
-                                <button (click)="editarFormularioA(formularioA)" class="btn btn-primary">Editar</button>
+                                <button (click)="eliminarContacto(contacto.id_contacto)" class="btn btn-danger">Eliminar</button>
+                                <button (click)="editarContacto(contacto)" class="btn btn-primary">Editar</button>
 
                             </div>
                         </td>
@@ -58,4 +48,6 @@
         </div>
 
     </div>
-</div>
+</div> -->
+
+

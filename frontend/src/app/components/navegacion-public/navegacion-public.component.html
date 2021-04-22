@@ -64,7 +64,7 @@
           </a>
 
         <li class="nav-item">
-            <h4><a class="nav-link" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer">CONTACTO</a></h4>
+            <h4><a class="nav-link"  routerLink="contacto">CONTACTO</a></h4>
         </li>
         
         <!--MENU ADMINISTRADOR-->
@@ -83,10 +83,11 @@
                         <li class="nav-item">
                             <a class="nav-link" *ngIf="authServ.verificarUsuarioLogueado()" href="#" routerLink="/admin-evento">Eventos</a>
                         </li>
-                        <!-- 
+                        
                         <li class="nav-item">
-                            <a class="nav-link" *ngIf="authServ.verificarUsuarioLogueado()" href="#" routerLink="/form-adopcion/1">Adopcion</a>
+                            <a class="nav-link" *ngIf="authServ.verificarUsuarioLogueado()" href="#" routerLink="contacto">contacto</a>
                         </li>
+                        <!-- 
                         <li class="nav-item">
                             <a class="nav-link" *ngIf="authServ.verificarUsuarioLogueado()" href="#" routerLink="/donaciones">Donaciones</a>
                         </li>
